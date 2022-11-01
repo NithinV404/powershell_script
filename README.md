@@ -1,8 +1,5 @@
 # powershell_script
-A one click customize and install custom axios to windows terminal
-
-# powershell-profile
-Pretty PowerShell that looks good and functions almost as good as Linux terminal 
+A one click script to customize and install custom axios to windows terminal and install oh-my-posh
 
 ## One Line Install (Elevated PowerShell Recommended)
 
