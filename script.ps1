@@ -5,7 +5,6 @@ if (-not(Test-Path -Path $PROFILE -PathType Leaf)) {
          Write-Host "The profile @ [$PROFILE] has been created."
      }
      catch {
-         throw $_.Exception.Message
 	  try { Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine }
 	  catch { 
 	  throw $_.Exception.Message }
