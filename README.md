@@ -4,7 +4,7 @@ A one click script to customize and install custom axios to windows terminal and
 ## One Line Install (Elevated PowerShell Recommended)
 
 ```
-irm "https://github.com/ChrisTitusTech/powershell-profile/raw/main/setup.ps1" | iex
+irm "https://github.com/NithinV404/powershell_script/raw/main/script.ps1" | iex
 ```
 
 ## Fix the Missing Font
