@@ -5,7 +5,7 @@ if (-not(Test-Path -Path $PROFILE -PathType Leaf)) {
          Write-Host "The profile @ [$PROFILE] has been created."
      }
      catch {
-	  throw $_.Exception.Message 
+         throw $_.Exception.Message
      }
  }
 # If the file already exists, show the message and do nothing.
