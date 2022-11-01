@@ -7,7 +7,8 @@ if (-not(Test-Path -Path $PROFILE -PathType Leaf)) {
      catch {
          throw $_.Exception.Message
 	  try { Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine }
-	  catch $_.Exception.Message
+	  catch { 
+	  throw $_.Exception.Message }
      }
  }
 # If the file already exists, show the message and do nothing.
