@@ -151,7 +151,7 @@ function find-file($name) {
         }
 }
 function unzip ($file) {
-        echo("Extracting", $file, "to", $pwd)
+        Write-Output("Extracting", $file, "to", $pwd)
 	$fullFile = Get-ChildItem -Path $pwd -Filter .\cove.zip | ForEach-Object{$_.FullName}
         Expand-Archive -Path $fullFile -DestinationPath $pwd
 }
