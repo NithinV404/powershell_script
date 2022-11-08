@@ -130,6 +130,18 @@ Function Test-CommandExists
 #
 # Aliases
 #
+if (Test-CommandExists nvim) {
+        $EDITOR='nvim'
+        $EDITOR='pvim'
+} elseif (Test-CommandExists code) {
+        #VS Code
+        $EDITOR='code'
+} elseif (Test-CommandExists notepad) {
+        #fallback to notepad since it exists on every windows machine
+        $EDITOR='notepad'
+}
+Set-Alias -Name vim -Value $EDITOR
+
 function ll { Get-ChildItem -Path $pwd -File }
 function g { Set-Location $HOME\Documents\Github }
 function gcom
@@ -160,8 +172,8 @@ function find-file($name) {
         }
 }
 function unzip ($file) {
-        echo("Extracting", $file, "to", $pwd)
-	$fullFile = Get-ChildItem -Path $pwd -Filter .\cove.zip | ForEach-Object{$_.FullName}
+        Write-Output("Extracting", $file, "to", $pwd)
+	$fullFile = Get-ChildItem -Path $pwd  | ForEach-Object{$_.FullName}
         Expand-Archive -Path $fullFile -DestinationPath $pwd
 }
 function grep($regex, $dir) {
